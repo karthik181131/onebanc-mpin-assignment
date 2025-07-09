@@ -8,7 +8,7 @@ def is_valid_date(date_str):
     except ValueError:
         return False
 
-# Prompt for valid MPIN
+# For valid MPIN
 while True:
     mpin = input("Enter MPIN (4 or 6 digits): ").strip()
     if mpin.isdigit() and len(mpin) in [4, 6]:
