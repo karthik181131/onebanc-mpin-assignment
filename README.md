@@ -4,41 +4,19 @@ This is a simple Python project that checks if a user's MPIN (4 or 6 digits) is 
 
 You can check MPIN strength either through the **Command-Line Interface (CLI)** or a **user-friendly Web Interface**, both included in this project.
 
-## 💻 Command Line Interface (CLI)
-
-Run this to test interactively via terminal:
-```bash
-python run.py
-
-
 1.Run this to test interactively via terminal.
 ```bash
 python run.py
-
-## 💻 Command Line Interface (CLI)
-
-This is how the MPIN strength is checked via terminal:
-![CLI Demo](screenshots/cli_demo.png)
----
 
 2.web interface (flask):
 ```bash
 python run.py
 ** Access it at: http://127.0.0.1:5000
 
-## 🌐 **Web Interface (Flask)**
-Check MPIN strength using a simple web UI:
-![Web UI Screenshots](screenshots/web_ui.png)
----
-
 
 ** Run the Test Cases (Validation)
 ''''bash
  python -m src.test_cases
-
- ![Test Cases Result](screenshots/test_cases.png)
-
-
 
 
 📁 Folder Structure
