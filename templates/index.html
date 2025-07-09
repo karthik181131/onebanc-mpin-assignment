@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MPIN Strength Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #f1c40f;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d4ac0d;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .weak {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .strong {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .thank-you {
+            margin-top: 15px;
+            font-size: 0.95em;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const mpin = document.forms["mpinForm"]["mpin"].value.trim();
+            if (!/^\d{4}$|^\d{6}$/.test(mpin)) {
+                alert("Please enter a valid 4 or 6 digit MPIN.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+<div class="container">
+    <h2>MPIN Strength Checker</h2>
+    <form name="mpinForm" method="post" onsubmit="return validateForm()">
+        <label>MPIN:</label>
+        <input type="text" name="mpin" placeholder="Enter 4 or 6 digit MPIN" required>
+
+        <label>DOB:</label>
+        <input type="text" name="dob" placeholder="YYYY-MM-DD" required>
+
+        <label>Spouse DOB:</label>
+        <input type="text" name="spouse_dob" placeholder="YYYY-MM-DD" required>
+
+        <label>Anniversary:</label>
+        <input type="text" name="anniversary" placeholder="YYYY-MM-DD" required>
+
+        <button type="submit">Check</button>
+    </form>
+
+    {% if result %}
+        <div class="result {% if result.strength == 'WEAK' %}weak{% elif result.strength == 'STRONG' %}strong{% endif %}">
+            {% if result.strength == 'INVALID' %}
+                {{ result.message }}
+            {% elif result.strength == 'WEAK' %}
+                MPIN is Weak<br>
+                {% if reasons %}
+                    Reasons:
+                    <ul>
+                        {% for r in reasons %}
+                            <li>{{ r }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% else %}
+                MPIN is Strong
+            {% endif %}
+        </div>
+        <p class="thank-you">Thank you for using the MPIN Strength Checker.</p>
+    {% endif %}
+</div>
+</body>
+</html>
