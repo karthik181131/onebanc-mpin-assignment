@@ -61,7 +61,9 @@ mpin_task/
 ├── README.md                    # Documentation with instructions, usage, and features.
 
 
-github link: https://github.com/karthik181131/onebanc-mpin-assignment
+# MPIN Strength Checker – OneBanc Task
+
+🔗 [Click here to view the full project on GitHub](https://github.com/karthik181131/onebanc-mpin-assignment)
 
 ✍️ Author
 Boddepalli Karthik 
