@@ -45,8 +45,3 @@ mpin_task/
 Boddepalli Karthik 
 GMR Institute of Technology 
 B.Tech – CSE (AI & DS)
-
-
-
-
-
