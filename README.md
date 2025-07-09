@@ -2,7 +2,13 @@
 
 This is a simple Python project that checks if a user's MPIN (4 or 6 digits) is strong or weak.
 
-You can check MPIN strength either through the Command-Line Interface (CLI) or a user-friendly Web Interface, both included in this project.
+You can check MPIN strength either through the **Command-Line Interface (CLI)** or a **user-friendly Web Interface**, both included in this project.
+
+## 💻 Command Line Interface (CLI)
+
+Run this to test interactively via terminal:
+```bash
+python run.py
 
 
 1.Run this to test interactively via terminal.
@@ -30,7 +36,7 @@ Check MPIN strength using a simple web UI:
 ** Run the Test Cases (Validation)
 ''''bash
  python -m src.test_cases
- 
+
  ![Test Cases Result](screenshots/test_cases.png)
 
 
