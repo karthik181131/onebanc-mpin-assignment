@@ -26,8 +26,7 @@ This is how the MPIN strength is checked via terminal:
 python run.py
 ** Access it at: http://127.0.0.1:5000
 
-## 🌐 Web Interface (Flask)
-
+## 🌐 **Web Interface (Flask)**
 Check MPIN strength using a simple web UI:
 ![Web UI Screenshots](screenshots/web_ui.png)
 ---
