@@ -42,8 +42,4 @@ mpin_task/
 ✍️ Author
 Boddepalli Karthik 
 GMR Institute of Technology 
-<<<<<<< HEAD
 B.Tech – CSE (AI & DS)
-=======
-B.Tech – CSE (AI & DS)
->>>>>>> 84d8153 (Save local changes before rebase)
